@@ -1,10 +1,38 @@
-# Employee Management System 
-# React + Context API + LocalStorage
+# Employee Management System  
+**Tech Stack:** React | Context API | LocalStorage
 
-# Functional employee task-management interface with role-based UI for Admin and Employee.
-# Implemented login system with validation, Context API state management, and LocalStorage-based sessions.
-# Built task workflows: create (admin), accept/complete/fail (employee), and dynamic task status updates.
-# Designed responsive dashboards with task counters, swipeable task list UI, and component-driven architecture.
+A functional employee task-management interface with a role-based UI for **Admin** and **Employee**, featuring task workflows, session handling, and responsive dashboards.
 
-# author:Praanshu Joshi
+---
+
+## 🚀 Features
+
+### 🔐 Authentication & Role Management
+- Implemented login system with proper validation.  
+- Role-based UI: **Admin Dashboard** and **Employee Dashboard**.  
+- Session handling using **LocalStorage**.
+
+### 🗂️ Task Management Workflow
+- **Admin:** Create and assign tasks to employees.  
+- **Employee:** Accept, complete, or fail assigned tasks.  
+- Automatic status updates reflected across dashboards.
+
+### 📊 UI & Dashboards
+- Responsive dashboards for both roles.  
+- Task counters showing Pending, Accepted, Completed, and Failed tasks.  
+- Swipeable task list UI for a smooth experience.  
+- Component-driven modular architecture.
+
+---
+
+## 🛠️ Tech Highlights
+- **React + Context API** for global state management.  
+- **LocalStorage** for persistent user sessions.  
+- Clean and reusable component structure.
+
+---
+
+## 👨‍💻 Author
+**Praanshu Joshi**
+
 
