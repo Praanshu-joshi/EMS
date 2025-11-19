@@ -12,7 +12,7 @@ const App = () => {
   const [userData,SetUserData] = useContext(AuthContext)
 
   
-  // keep login based on past logn data from local storage
+  // keep login based on past login data from local storage
 
   useEffect(()=>{
     const prev=localStorage.getItem('loggedInUser')
@@ -27,7 +27,6 @@ const App = () => {
 
 
  //handle login function to check which user  is logged in
- 
 
   const handleLogin=(email,password)=>{
     if(email=='admin@me.com' && password=='123'){
@@ -58,10 +57,10 @@ if(!user){
   return(<Login handleLogin={handleLogin}></Login>)
 }
 else if (user=='admin'){
-  return (<AdminDashboard></AdminDashboard>)
+  return (<AdminDashboard setUser={setUser}></AdminDashboard>)
 }
 else {
-  return(<EmployeeDashboard></EmployeeDashboard>)
+  return(<EmployeeDashboard data={loggedInUserData} setUser={setUser}></EmployeeDashboard>)
 }
 
 
