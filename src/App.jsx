@@ -12,16 +12,16 @@ const App = () => {
   const [userData,SetUserData] = useContext(AuthContext)
 
   
-  //keep login based on past logn data from local storage
+  // keep login based on past logn data from local storage
 
-  // useEffect(()=>{
-  //   const prev=localStorage.getItem('loggedInUser')
-  //   if(prev){
-  //      const {role,data}=JSON.parse(prev)
-  //      setUser(role);
-  //      setLoggedInUserData(data)
-  //   }
-  // },[])
+  useEffect(()=>{
+    const prev=localStorage.getItem('loggedInUser')
+    if(prev){
+       const {role,data}=JSON.parse(prev)
+       setUser(role);
+       setLoggedInUserData(data)
+    }
+  },[])
 
 
 
