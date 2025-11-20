@@ -4,7 +4,7 @@ import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/DashBoard/employeeDashboard'
 import AdminDashboard from './components/DashBoard/adminDashboard'
 import { AuthContext } from './context/AuthProvider'
-import { setLocalStorage } from './utils/localStorage'
+
 
 const App = () => {
   const [user,setUser]=useState(null);

@@ -1,9 +1,9 @@
-import { useState } from "react"
-
-
+import React, { useContext, useState } from 'react'
+import { AuthContext } from '../../context/AuthProvider'
 
 const CreateTask = () => {
-   
+
+    const [userData, setUserData] = useContext(AuthContext)
 
     const [taskTitle, setTaskTitle] = useState('')
     const [taskDescription, setTaskDescription] = useState('')
@@ -15,6 +15,20 @@ const CreateTask = () => {
 
     const submitHandler = (e) => {
         e.preventDefault()
+        const obj={ taskTitle, taskDescription, taskDate, category, active: false, newTask: true, failed: false, completed: false }
+     
+
+        const data = userData
+
+        data.forEach(function (elem) {
+            if (asignTo == elem.firstName) {
+                elem.tasks.push(obj)
+                elem.taskCounts.newTask = elem.taskCounts.newTask + 1
+            }
+        })
+        localStorage.setItem('employees',JSON.stringify(data))
+        setUserData(data)
+        console.log(data);
 
         setTaskTitle('')
         setCategory('')
@@ -23,8 +37,9 @@ const CreateTask = () => {
         setTaskDescription('')
 
     }
-  return (
-   <div className='p-5 bg-[#1c1c1c] mt-5 rounded'>
+
+    return (
+        <div className='p-5 bg-[#1c1c1c] mt-5 rounded'>
             <form onSubmit={(e) => {
                 submitHandler(e)
             }}
@@ -81,7 +96,7 @@ const CreateTask = () => {
 
             </form>
         </div>
-  )
+    )
 }
 
 export default CreateTask
