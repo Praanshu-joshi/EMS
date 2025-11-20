@@ -10,7 +10,7 @@ const AuthProvider = ({children}) => {
     const {employees}=getLocalStorage();
     if(!employees){
       setLocalStorage()
-      ({employees}=getLocalStorage());
+      ({employees}=getLocalStorage())
       
     }
     setUserData(employees);
